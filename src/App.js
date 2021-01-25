@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Member from "./Components/Member";
 import Nav from "./Components/Nav";
 import data from "./data.json";
+import "./App.css";
 const keys = Object.keys(data);
 
 function App() {
@@ -9,11 +10,11 @@ function App() {
   return (
     <div>
       <Nav keys={keys} setComp={setComp} comp={comp} />
-      <div>
+      <ul className="cards">
         {data[keys[comp]].map((d) => (
           <Member member={d} />
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

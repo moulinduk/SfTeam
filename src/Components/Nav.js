@@ -2,12 +2,12 @@ import React from "react";
 import "./Nav.css";
 
 const compStyle = {
-  backgroundColor: "yellow"
+  backgroundColor: "rgb(56, 107, 141)"
 };
 
 function Nav(props) {
   return (
-    <div class="container borderYtoX">
+    <div class="nav-container borderYtoX">
       {props.keys.map((d, i) => (
         <button
           style={i === props.comp ? compStyle : {}}

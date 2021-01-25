@@ -1,5 +1,8 @@
-div.container button {
-  color: rgb(255, 0, 0);
+.nav-container {
+  background-color: rgb(15, 85, 117);
+}
+div.nav-container button {
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font: 20px Raleway;
   margin: 5px 10px;
@@ -9,8 +12,25 @@ div.container button {
   cursor: pointer;
   background: transparent;
   border-width: 0px;
-  width: 300px;
+  /*width: 300px;*/
 }
+
+@media (min-width: 900px) {
+  div.nav-container button {
+    width: calc(33vw - 20px);
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  div.nav-container button {
+    width: calc(50vw - 20px);
+  }
+}
+@media (max-width: 700px) {
+  div.nav-container button {
+    width: calc(100vw - 20px);
+  }
+}
+
 div.borderYtoX button:before,
 div.borderYtoX button:after {
   position: absolute;
@@ -18,7 +38,7 @@ div.borderYtoX button:after {
   height: 100%;
   width: 2px;
   content: "";
-  background: rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
   transition: all 0.3s;
 }
 
@@ -42,4 +62,8 @@ div.borderYtoX button:hover:after {
 div.borderYtoX button:focus,
 div.borderYtoX button:hover {
   outline-width: 0px;
+}
+
+.active {
+  background-color: rgb(56, 107, 141);
 }
