@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Member from "./Components/Member";
+import data from "./data.json";
+const keys = Object.keys(data);
 
 function App() {
+  const [comp, setComp] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        {keys.map((d, i) => (
+          <button
+            onClick={() => {
+              setComp(i);
+            }}
+          >
+            {d}
+          </button>
+        ))}
+      </div>
+      <div>
+        {data[keys[comp]].map((d) => (
+          <Member member={d} />
+        ))}
+      </div>
     </div>
   );
 }
