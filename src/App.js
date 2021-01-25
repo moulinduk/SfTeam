@@ -9,6 +9,7 @@ function App() {
   const [comp, setComp] = useState(0);
   return (
     <div>
+      <div>Spring Fest</div>
       <Nav keys={keys} setComp={setComp} comp={comp} />
       <ul className="cards">
         {data[keys[comp]].map((d) => (

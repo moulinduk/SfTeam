@@ -1,5 +1,6 @@
 .nav-container {
   background-color: rgb(15, 85, 117);
+  padding: 20px 0px;
 }
 div.nav-container button {
   color: rgb(255, 255, 255);
@@ -17,17 +18,17 @@ div.nav-container button {
 
 @media (min-width: 900px) {
   div.nav-container button {
-    width: calc(33vw - 20px);
+    width: calc(33vw - 25px);
   }
 }
 @media (min-width: 700px) and (max-width: 900px) {
   div.nav-container button {
-    width: calc(50vw - 20px);
+    width: calc(50vw - 30px);
   }
 }
 @media (max-width: 700px) {
   div.nav-container button {
-    width: calc(100vw - 20px);
+    width: calc(100vw - 40px);
   }
 }
 

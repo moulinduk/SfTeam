@@ -15,10 +15,16 @@ function Member(props) {
         <a class="email" href={"mailto:" + props.member.email}>
           {props.member.email}
         </a>
-        <a class="facebook" href={props.member.facebook}>
+        <a
+          href={props.member.facebook}
+          style={{ display: "inline", padding: "0px 30px" }}
+        >
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a class="linkedin" href={props.member.linkedin}>
+        <a
+          href={props.member.linkedin}
+          style={{ display: "inline", padding: "0px 30px" }}
+        >
           <i class="fa fa-linkedin" aria-hidden="true"></i>
         </a>
       </div>
