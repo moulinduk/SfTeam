@@ -11,11 +11,11 @@ function App() {
     <div>
       <div>Spring Fest</div>
       <Nav keys={keys} setComp={setComp} comp={comp} />
-      <ul className="cards">
+      <div className="cards-container">
         {data[keys[comp]].map((d) => (
           <Member member={d} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
