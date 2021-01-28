@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-image: url("https://as2.ftcdn.net/jpg/02/77/84/23/500_F_277842394_acaERKeO3f9FlDDsZrRnXt7H1pFvLWml.jpg");
+  background-size: cover;
 }
 
 .allMember {

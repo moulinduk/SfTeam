@@ -117,11 +117,13 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #fff;
+  background-image: url("https://www.kindpng.com/picc/m/37-376201_transparent-swirls-clipart-indian-border-clip-art-hd.png");
+  background-size: cover;
   width: 100%;
   height: 60px;
   z-index: 1;
-  padding: 5px;
+  padding-top: 20px;
+  /* padding: 5px; */
 }
 .details h2 {
   font-size: 15px;
@@ -141,11 +143,11 @@
   bottom: -60px;
   left: 0;
   opacity: 0;
-  background: #fff;
+  /*background: #fff;*/
   width: 100%;
   height: 60px;
   z-index: 3;
-  padding: 6px;
+  /* padding: 6px; */
   transition: 0.4s;
 }
 

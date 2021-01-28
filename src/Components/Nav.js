@@ -11,7 +11,7 @@ function Nav(props) {
   //console.log(screen.width)
   window.addEventListener('resize', () => {setWidth(window.innerWidth < 700)})
   return (
-    (width)?
+    (true)?
     (<div className="hamburger-menu">
       <input id="menu__toggle" type="checkbox" checked={open} />
       <label className="menu__btn" onClick={()=> {setOpen(!open)}}>
