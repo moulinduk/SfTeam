@@ -1,25 +1,32 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 
 const compStyle = {
-  backgroundColor: "rgb(56, 107, 141)"
+  color: "red"
+  //backgroundColor: "rgb(56, 107, 141)"
 };
 
 function Nav(props) {
   const [open, setOpen] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth < 700)
+  const [width, setWidth] = useState(window.innerWidth < 700);
   //console.log(screen.width)
-  window.addEventListener('resize', () => {setWidth(window.innerWidth < 700)})
-  return (
-    (true)?
-    (<div className="hamburger-menu">
+  window.addEventListener("resize", () => {
+    setWidth(window.innerWidth < 700);
+  });
+  return width ? (
+    <div className="hamburger-menu">
       <input id="menu__toggle" type="checkbox" checked={open} />
-      <label className="menu__btn" onClick={()=> {setOpen(!open)}}>
+      <label
+        className="menu__btn"
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
         <span></span>
       </label>
 
       <ul className="menu__box">
-        <div className="nav-container borderYtoX">
+        <div className="borderYtoX">
           {props.keys.map((d, i) => (
             <button
               style={i === props.comp ? compStyle : {}}
@@ -33,8 +40,25 @@ function Nav(props) {
           ))}
         </div>
       </ul>
-    </div>):
-    (
+    </div>
+  ) : (
+    <div style={{ height: "27vw" }}>
+      <div className="nav-container">
+        {props.keys.map((d, i) => (
+          <button
+            style={i === props.comp ? compStyle : {}}
+            onClick={() => {
+              props.setComp(i);
+              setOpen(false);
+            }}
+          >
+            {d}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+  /*(
       <div className="nav-container borderYtoX">
         {props.keys.map((d, i) => (
           <button
@@ -46,8 +70,7 @@ function Nav(props) {
             {d}
           </button>
         ))}
-      </div>)
-  );
+      </div>)*/
   // return (
   // );
 }

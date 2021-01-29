@@ -81,24 +81,62 @@
 }
 
 .nav-container {
-  background-color: rgb(15, 85, 117);
+  /* background-color: rgb(15, 85, 117); */
   padding: 20px 0px;
 }
 div.nav-container button {
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-decoration: none;
-  font: 20px "Kumar One", cursive;
-  margin: 5px 10px;
-  padding: 10px 10px;
+  font: 1.5vw "Kumar One", cursive;
+  /* margin: 5px 10px; */
+  padding: 1vw;
   position: relative;
   z-index: 0;
   cursor: pointer;
   background: transparent;
   border-width: 0px;
-  /*width: 300px;*/
+  width: 9.5vw;
+  margin-bottom: 5vw;
+  text-shadow: 0 0 10px red;
+  font-weight: bold;
 }
 
-@media (min-width: 900px) {
+div.nav-container button:nth-child(1) {
+  margin-left: 15vw;
+}
+div.nav-container button:nth-child(2),
+div.nav-container button:nth-child(3),
+div.nav-container button:nth-child(4) {
+  margin-left: 10.3vw;
+}
+div.nav-container button:nth-child(4) {
+  margin-right: 10vw;
+}
+div.nav-container button:nth-child(5) {
+  margin-left: 5vw;
+}
+div.nav-container button:nth-child(6),
+div.nav-container button:nth-child(7),
+div.nav-container button:nth-child(8),
+div.nav-container button:nth-child(9) {
+  margin-left: 10.3vw;
+}
+
+div.borderYtoX button {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 10px 10px;
+  font: 20px "Kumar One", cursive;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  background: rgb(15, 85, 117);
+  border-width: 0px;
+  width: calc(100vw - 40px);
+}
+
+/* @media (min-width: 900px) {
   div.nav-container button {
     width: calc(33vw - 25px);
   }
@@ -107,12 +145,12 @@ div.nav-container button {
   div.nav-container button {
     width: calc(50vw - 30px);
   }
-}
+} 
 @media (max-width: 700px) {
-  div.nav-container button {
+  div.borderYtoX button {
     width: calc(100vw - 40px);
   }
-}
+} */
 
 div.borderYtoX button:before,
 div.borderYtoX button:after {
@@ -143,7 +181,9 @@ div.borderYtoX button:hover:after {
 }
 
 div.borderYtoX button:focus,
-div.borderYtoX button:hover {
+div.borderYtoX button:hover,
+div.nav-container button:hover,
+div.nav-container button:focus {
   outline-width: 0px;
 }
 
